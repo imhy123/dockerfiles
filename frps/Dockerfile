@@ -1,4 +1,4 @@
-FROM ubuntu:bionic
+FROM ubuntu:focal
 
 ARG THIS_ARCH_GO=amd64
 ARG FRP_VER=0.37.1
