@@ -1,4 +1,4 @@
-FROM ubuntu:focal
+FROM ubuntu:20.04
 
 ARG THIS_ARCH_GO=amd64
 ARG FRP_VER=0.37.1
@@ -11,8 +11,6 @@ RUN \
   tar -xf /tmp/frp/frps.tar.gz -C /tmp/frp && \
   mv /tmp/frp/frp_${FRP_VER}_linux_${THIS_ARCH_GO}/frps /usr/bin/ && \
   chmod +x /usr/bin/frps && \
-  apt-get purge --auto-remove -y \
-    wget tar && \
   apt-get clean && \
   rm -rf /tmp/frp && \
   mkdir /frp
